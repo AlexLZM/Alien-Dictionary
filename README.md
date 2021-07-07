@@ -31,3 +31,21 @@ Explanation: The order is invalid, so return "".
 1 <= words.length <= 100
 1 <= words[i].length <= 100
 words[i] consists of only lowercase English letters.
+
+### My Strategy
+
+Construct a graph as a representation of the order relationships of the letters and do topological sort.
+
+1. Initiate dictionaries as data structure for the graph;
+2. Parse the list of words and construct gragh;
+3. Pick letters with 0 indegree as start points to sort into stack;
+4. pick the current letter from stack and add to the result string;
+5. decrease 1 indegree for all children, add to stack if indegree is 0;
+6. delete the current letter from graph.
+7. repeat 4 - 6 
+
+
+
+
+
+
